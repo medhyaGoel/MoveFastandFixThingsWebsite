@@ -5,11 +5,11 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 const navItems = [
-  { name: 'Home', path: '/' },
-  { name: 'Syllabus', path: '/syllabus' },
-  { name: 'Guest Speakers', path: '/guest-speakers' },
-  { name: 'Opportunities', path: '/opportunities' },
-  { name: 'Blog', path: '/blog' },
+  { name: 'HOME', path: '/' },
+  { name: 'SYLLABUS', path: '/syllabus' },
+  { name: 'GUEST SPEAKERS', path: '/guest-speakers' },
+  { name: 'OPPORTUNITIES', path: '/opportunities' },
+  { name: 'BLOG', path: '/blog' },
 ];
 
 export default function Navigation() {
@@ -17,9 +17,9 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]">
-      <div className="px-2 md:px-4 lg:px-6 py-3">
+      <div className="mx-auto max-w-[1700px] px-2 md:px-4 lg:px-6 py-3">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-6 md:gap-8">
+          <div className="flex items-center gap-6 md:gap-8 pl-1 md:pl-4">
             {navItems.map((item) => {
               const isActive = pathname === item.path;
               return (
@@ -35,14 +35,6 @@ export default function Navigation() {
                   >
                     {item.name}
                   </span>
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeTab"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white"
-                      initial={false}
-                      transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-                    />
-                  )}
                 </Link>
               );
             })}

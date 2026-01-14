@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Georgia', 'Times New Roman', 'serif'],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
         sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
     },

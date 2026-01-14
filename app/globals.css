@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15+Charted&family=Jersey+25&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,6 +12,15 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .font-jersey {
+    font-family: "Tourney", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 87.5;
   }
 }
 

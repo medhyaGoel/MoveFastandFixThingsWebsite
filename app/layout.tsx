@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "./components/Navigation";
+import { Playfair_Display } from "next/font/google";
+
+// High-contrast serif for NYT-style title and any `font-serif` text
+const nytSerif = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-serif",
+});
 
 export const metadata: Metadata = {
   title: "Move Fast & Fix Things: Innovating for Effective Government",
@@ -14,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`${nytSerif.variable} antialiased`}>
         <Navigation />
         {children}
       </body>

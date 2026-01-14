@@ -13,13 +13,13 @@ export default function Home() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif font-black tracking-[-0.04em] leading-[0.78] text-[clamp(3.8rem,14vw,13.5rem)]"
+            className="font-jersey tracking-[-0.08em] leading-[0.78] text-[clamp(3.8rem,14vw,13.5rem)]"
           >
-            MOVE FAST & FIX THINGS
+            MOVE FAST & FIX THINGS.
           </motion.h1>
 
           {/* Bottom split */}
-          <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-stretch">
+          <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 md:pl-4 items-stretch">
             {/* Left copy */}
             <motion.div
               initial={{ opacity: 0, y: 18 }}
@@ -36,8 +36,6 @@ export default function Home() {
               <p className="mt-4 text-white/75 text-lg leading-relaxed font-light text-balance">
               Over the course of 10 weeks, we convened 28 preeminent civic technologists to examine 1. Why civic technology matters, 2. Where is it succeeding and failing, and 3. How young people can position themselves to contribute to the effort to revitalize American civicTech. 
                This website contains our materials and learnings from leading this course. We hope that this can serve as a launching pad for aspiring civic technologists across the nation, as a non-partisan, student perspective on the case for effective civic technology, and how to get there. 
-               This website contains our materials and learnings from leading this course—built as a non-partisan, student perspective on the case for
-                effective civic technology, and how to get there.
               </p>
             </motion.div>
 
@@ -57,7 +55,7 @@ export default function Home() {
                         Noun
                       </div>
                       <div className="mt-3 text-2xl md:text-3xl font-semibold tracking-[-0.01em]">
-                      Civ·ic tech·nol·o·gy
+                      civ·ic tech·nol·o·gy
                       </div>
                       <div className="mt-2 text-white/70 italic font-light">
                         /tekˈnäləjē/
