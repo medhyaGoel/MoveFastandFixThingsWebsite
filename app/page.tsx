@@ -30,7 +30,7 @@ export default function Home() {
             >
 
               <p className="mt-8 text-white/90 text-lg leading-relaxed font-light text-balance">
-                In Fall 2025, <span className="font-medium">Medhya Goel & Emily Tianshi</span> (sponsored by Professor Bruce Cain) came together to teach{" "}
+                In Fall 2025, <a href="/team"><span className="font-medium">Medhya Goel & Emily Tianshi</span></a> (sponsored by Professor Bruce Cain) came together to teach{" "}
                 <span className="font-medium">POLISCI 33SI</span>, a deep dive into the past, present, and future of civic technology.
               </p>
               <p className="mt-4 text-white/75 text-lg leading-relaxed font-light text-balance">

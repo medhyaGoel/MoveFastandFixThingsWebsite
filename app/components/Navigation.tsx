@@ -9,6 +9,7 @@ const navItems = [
   { name: 'SYLLABUS', path: '/syllabus' },
   { name: 'GUEST SPEAKERS', path: '/guest-speakers' },
   { name: 'OPPORTUNITIES', path: '/opportunities' },
+  { name: 'TEAM', path: '/team' },
   { name: 'BLOG', path: '/blog' },
 ];
 
