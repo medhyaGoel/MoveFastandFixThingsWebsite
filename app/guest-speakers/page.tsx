@@ -28,17 +28,21 @@ const speakers = [
 
 export default function GuestSpeakers() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#fafaf9] to-white text-[#0a0a0a] pt-24">
-      <div className="max-w-6xl mx-auto px-8 md:px-16 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <h1 className="text-5xl md:text-6xl font-semibold mb-6 text-[#0a0a0a]">Guest Speakers</h1>
-          <p className="text-xl text-[#4a4a4a] mb-16 font-light">
-            Insights from 28 preeminent civic technologists who joined us throughout the course
-          </p>
+    <div className="min-h-screen bg-[#0a0a0a] text-white">
+      <section className="min-h-screen pt-16 pb-14 px-2 md:px-4 lg:px-6">
+        <div className="mx-auto max-w-[1700px]">
+          {/* Big wordmark */}
+          <motion.h1
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="font-jersey tracking-[-0.08em] leading-[0.78] text-[clamp(3.8rem,14vw,13.5rem)]"
+          >
+            GUEST SPEAKERS
+          </motion.h1>
+
+          {/* Content section */}
+          <div className="mt-8 md:mt-10">
 
           <div className="space-y-8">
             {speakers.map((speaker, index) => (
@@ -48,28 +52,28 @@ export default function GuestSpeakers() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: index * 0.1 }}
-                className="bg-white rounded-xl border border-[#e5e5e5] p-8 md:p-12 hover:border-[#ccc] hover:shadow-lg transition-all group"
+                className="bg-white/10 rounded-xl border border-white/20 p-8 md:p-12 hover:border-white/30 transition-all group"
               >
                 <div className="mb-6">
-                  <p className="text-xs uppercase tracking-[0.15em] text-[#999] mb-3 font-medium">
+                  <p className="text-xs uppercase tracking-[0.15em] text-white/60 mb-3 font-medium">
                     {speaker.organization}
                   </p>
-                  <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-[#0a0a0a] group-hover:text-[#333] transition-colors">
+                  <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-white group-hover:text-white/90 transition-colors">
                     {speaker.title}
                   </h2>
-                  <p className="text-lg text-[#4a4a4a] leading-relaxed font-light">{speaker.description}</p>
+                  <p className="text-lg text-white/70 leading-relaxed font-light">{speaker.description}</p>
                 </div>
 
-                <div className="border-t border-[#e5e5e5] pt-6 mt-6">
-                  <h3 className="text-xs uppercase tracking-[0.15em] text-[#999] mb-4 font-medium">
+                <div className="border-t border-white/20 pt-6 mt-6">
+                  <h3 className="text-xs uppercase tracking-[0.15em] text-white/60 mb-4 font-medium">
                     Notes from the Talk
                   </h3>
-                  <p className="text-lg text-[#4a4a4a] leading-relaxed font-light">{speaker.notes}</p>
+                  <p className="text-lg text-white/70 leading-relaxed font-light">{speaker.notes}</p>
                 </div>
 
-                <div className="mt-6 pt-6 border-t border-[#f0f0f0]">
-                  <p className="text-sm text-[#666] font-medium">
-                    Speaker: <span className="text-[#0a0a0a]">{speaker.name}</span>
+                <div className="mt-6 pt-6 border-t border-white/10">
+                  <p className="text-sm text-white/60 font-medium">
+                    Speaker: <span className="text-white/90">{speaker.name}</span>
                   </p>
                 </div>
               </motion.div>
@@ -81,17 +85,18 @@ export default function GuestSpeakers() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-20 bg-gradient-to-br from-white to-[#fafaf9] rounded-xl border border-[#e5e5e5] p-10 text-center shadow-sm"
+            className="mt-20 bg-white/10 rounded-xl border border-white/20 p-10 text-center"
           >
-            <p className="text-lg text-[#4a4a4a] mb-3 font-light">
+            <p className="text-lg text-white/70 mb-3 font-light">
               More speaker notes and recordings will be added as they become available.
             </p>
-            <p className="text-sm text-[#999] font-medium">
+            <p className="text-sm text-white/60 font-medium">
               Total: 28 guest speakers across 10 weeks
             </p>
           </motion.div>
-        </motion.div>
-      </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -15,6 +15,7 @@ const navItems = [
 
 export default function Navigation() {
   const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]">
@@ -40,6 +41,11 @@ export default function Navigation() {
               );
             })}
           </div>
+          {!isHomePage && (
+            <div className="font-jersey text-white text-lg md:text-xl tracking-[-0.02em]">
+              &gt;&gt;&gt; Move Fast & Fix Things
+            </div>
+          )}
         </div>
       </div>
     </nav>
