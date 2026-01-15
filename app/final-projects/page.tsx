@@ -87,7 +87,7 @@ export default function FinalProjects() {
                       )}
                       {/* Title and subtitle */}
                       <div className="px-6 py-5 border-t border-white/10">
-                        <h3 className="text-2xl md:text-3xl font-semibold text-white mb-1">
+                        <h3 className="text-2xl md:text-3xl uppercase font-semibold tracking-[0.1em] text-white mb-1">
                           {project.title}
                         </h3>
                         <p className="text-sm md:text-base text-white/70 uppercase tracking-[0.1em]">

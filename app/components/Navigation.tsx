@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 const navItems = [
   { name: 'HOME', path: '/' },
   { name: 'SYLLABUS', path: '/syllabus' },
-  { name: 'GUEST SPEAKERS', path: '/guest-speakers' },
   { name: 'FINAL PROJECTS', path: '/final-projects' },
   { name: 'RESOURCES', path: '/resources' },
   { name: 'TEAM', path: '/team' },
@@ -28,7 +27,7 @@ export default function Navigation() {
                 <Link
                   key={item.path}
                   href={item.path}
-                  className="relative text-sm font-medium tracking-wide transition-colors"
+                  className="relative text-sm md:text-base upper case font-medium tracking-[0.1em] transition-colors"
                 >
                   <span
                     className={`transition-colors ${

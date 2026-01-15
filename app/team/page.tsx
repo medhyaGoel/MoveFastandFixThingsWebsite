@@ -21,7 +21,7 @@ export default function Team() {
           </motion.h1>
 
           {/* Two-column layout echoing the home split */}
-          <div className="mt-8 md:mt-0 grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-5 items-stretch">
+          <div className="mt-8 md:mt-0 grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-5 md:pl-4 items-stretch">
             {/* Left copy block */}
             <motion.div
               initial={{ opacity: 0, y: 18 }}

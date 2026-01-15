@@ -176,7 +176,7 @@ export default function Resources() {
           </motion.h1>
 
           {/* Content section */}
-          <div className="mt-8 md:mt-10">
+          <div className="mt-8 md:px-4">
           <div className="space-y-20">
             {resources.map((category, categoryIndex) => (
               <motion.div
@@ -186,8 +186,8 @@ export default function Resources() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: categoryIndex * 0.1 }}
               >
-                <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-white">
-                  {category.category}
+                <h2 className="text-2xl md:text-base tracking-[0.1em] uppercase font-semibold mb-10 text-white">
+                &gt;&gt;&gt; {category.category}
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {category.items.map((item, itemIndex) => {

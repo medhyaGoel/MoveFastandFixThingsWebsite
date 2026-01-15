@@ -15,7 +15,7 @@ export default function Home() {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="font-jersey tracking-[-0.08em] leading-[0.78] text-[clamp(3.8rem,14vw,13.5rem)]"
           >
-            &gt;&gt;&gt; MOVE FAST & FIX THINGS
+            &gt;&gt;&gt; MOVE FAST & FIX THINGS.
           </motion.h1>
 
           {/* Bottom split */}
