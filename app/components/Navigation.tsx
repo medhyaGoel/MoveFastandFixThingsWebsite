@@ -8,9 +8,9 @@ const navItems = [
   { name: 'HOME', path: '/' },
   { name: 'SYLLABUS', path: '/syllabus' },
   { name: 'GUEST SPEAKERS', path: '/guest-speakers' },
-  { name: 'OPPORTUNITIES', path: '/opportunities' },
+  { name: 'FINAL PROJECTS', path: '/final-projects' },
+  { name: 'RESOURCES', path: '/resources' },
   { name: 'TEAM', path: '/team' },
-  { name: 'BLOG', path: '/blog' },
 ];
 
 export default function Navigation() {

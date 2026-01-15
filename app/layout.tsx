@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 import { Playfair_Display } from "next/font/google";
-
+import { Analytics } from '@vercel/analytics/next';
 // High-contrast serif for NYT-style title and any `font-serif` text
 const nytSerif = Playfair_Display({
   subsets: ["latin"],
@@ -25,6 +25,7 @@ export default function RootLayout({
       <body className={`${nytSerif.variable} antialiased`}>
         <Navigation />
         {children}
+        <Analytics />
       </body>
     </html>
   );
