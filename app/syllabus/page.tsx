@@ -133,7 +133,7 @@ const weeks = [
       "Braden Crimmins (Co-Founder of Ballot IQ, JD-PhD Candidate)"
     ],
     readings: [],
-    note: "In place of class, POLISCI 33SI is collaborating with Democracy Day to host an event on civic tech supporting election officials. Attendance is optional but highly recommended. Details TBA.",
+    note: "In place of class, we are collaborating with Democracy Day to host an event on civic tech supporting election officials.",
     slidesUrl: "",
     recordingUrl: ""
   },
@@ -218,8 +218,8 @@ export default function Syllabus() {
             className="mt-6 md:px-4"
           >
             <p className="text-base md:text-lg text-white/80 leading-relaxed font-light max-w-3xl">
-              This course was initially designed for the quarter system, and was taught over 10 weeks in Fall 2025 at Stanford University as <span className="font-medium">POLISCI 33SI - Move Fast & Fix Things: Innovating for Effective Government</span>.
-              We held 12 panels with 28 total speakers over the course of 11 weeks.
+              This course was initially designed for the quarter system and was taught in Fall 2025 at Stanford University as <span className="font-medium">POLISCI 33SI - Move Fast & Fix Things: Innovating for Effective Government</span>.
+              We held 12 panels with 28 total speakers over the course of 10 weeks.
             </p>
           </motion.div>
 
