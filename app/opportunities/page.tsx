@@ -63,7 +63,7 @@ const opportunities = [
 export default function Opportunities() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
-      <section className="min-h-screen pt-16 pb-14 px-2 md:px-4 lg:px-6">
+      <section className="min-h-screen pt-24 md:pt-16 pb-14 px-2 md:px-4 lg:px-6">
         <div className="mx-auto max-w-[1700px]">
           {/* Big wordmark */}
           <motion.h1

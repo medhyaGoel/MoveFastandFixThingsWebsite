@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const resources = [
   {
@@ -158,9 +159,21 @@ const resources = [
 export default function Resources() {
   // Max width per box: use '' for no limit, or e.g. 'max-w-[45%]' (of parent), 'max-w-[40vw]' (of viewport), 'max-w-[500px]'
   const boxMaxWidth = '';
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const update = () => {
+      if (typeof window !== "undefined") {
+        setIsDesktop(window.innerWidth >= 768);
+      }
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
-      <section className="min-h-screen pt-16 pb-14 px-2 md:px-4 lg:px-6">
+      <section className="min-h-screen pt-24 md:pt-16 pb-14 px-2 md:px-4 lg:px-6">
         <div className="mx-auto max-w-[1700px]">
           {/* Big wordmark */}
           <motion.h1
@@ -178,10 +191,10 @@ export default function Resources() {
             {resources.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={isDesktop ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
+                whileInView={isDesktop ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: categoryIndex * 0.1 }}
+                transition={isDesktop ? { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: categoryIndex * 0.1 } : undefined}
               >
                 <div className="flex items-center gap-6 mb-10">
                   <div className="h-px flex-1 max-w-[80px] bg-[#1f4cff]" aria-hidden />
@@ -213,10 +226,10 @@ export default function Resources() {
                       <Component
                         key={itemIndex}
                         {...linkProps}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={isDesktop ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
+                        whileInView={isDesktop ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: (categoryIndex * 0.1) + (itemIndex * 0.05) }}
+                        transition={isDesktop ? { duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: (categoryIndex * 0.1) + (itemIndex * 0.05) } : undefined}
                         className={`rounded-none border p-5 md:p-6 transition-all group flex-[1_1_min(100%,400px)] min-w-0 ${boxMaxWidth} ${boxClasses} ${item.link ? 'hover:opacity-95 cursor-pointer' : ''}`}
                       >
                         <h3 className={`text-xl md:text-2xl font-semibold mb-3 ${textClasses} transition-colors`}>

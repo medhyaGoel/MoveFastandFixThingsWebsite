@@ -8,7 +8,7 @@ import MedhyaPhoto from "../pictures/medhya.jpg";
 export default function Team() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
-      <section className="min-h-screen pt-16 pb-0 px-2 md:px-4 lg:px-6">
+      <section className="min-h-screen pt-24 md:pt-16 pb-0 px-2 md:px-4 lg:px-6">
         <div className="mx-auto max-w-[1700px]">
           {/* Title, mirroring landing-page aesthetic */}
           <motion.h1

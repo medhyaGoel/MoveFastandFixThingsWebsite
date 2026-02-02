@@ -70,7 +70,7 @@ const weeks = [
       "How do governments respond to crises that demand rapid technical capacity?"
     ],
     guestSpeakers: ["Ryan Panchadsaram (Kleiner Perkins Advisor, Former Deputy US CTO)"],
-    bonusEvent: "Jennifer Pahlka (Author of Recoding America, Founder of Code for America), Ben Bain (Director of State Capacity, Niskanen Center), Andrew Greenway (Public Digital), and Lauren Lombardo (Recoding America Fund) (10:30-11:30 AM, Encina Fourth Floor)",
+    bonusEvent: "Jennifer Pahlka (Author of Recoding America, Founder of Code for America), Ben Bain (Director of State Capacity, Niskanen Center), Andrew Greenway (Founder, Public Digital), and Lauren Lombardo (Policy Director, Recoding America Fund)",
     readings: [
       { text: "Jennifer Pahlka. Recoding America: Why Government Is Failing in the Digital Age and How We Can Do Better: Chapters 1-5.", link: "" },
       { text: "Ann Lewis and Jennifer Pahlka. \"The product operating model: How government should deliver digital services.\"", link: "" },
@@ -198,7 +198,7 @@ const weeks = [
 export default function Syllabus() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
-      <section className="min-h-screen pt-16 pb-14 px-2 md:px-4 lg:px-6">
+      <section className="min-h-screen pt-24 md:pt-16 pb-14 px-2 md:px-4 lg:px-6">
         <div className="mx-auto max-w-[1700px]">
           {/* Big wordmark */}
           <motion.h1
@@ -255,8 +255,8 @@ export default function Syllabus() {
                 className="p-6 md:p-8 transition-all group"
               >
                 <div className="flex flex-col md:flex-row md:items-stretch gap-6">
-                  <div className="flex-shrink-0 w-10 max-md:h-24 md:min-h-[140px] bg-[#1f4cff] flex items-center justify-center group-hover:bg-[#1f4cff]/90 transition-all">
-                    <span className="text-base font-bold text-white whitespace-nowrap uppercase tracking-[0.4em] -rotate-90">Week {week.week}</span>
+                  <div className="flex-shrink-0 w-32 h-10 md:w-10 md:h-auto md:min-h-[140px] bg-[#1f4cff] flex items-center justify-center group-hover:bg-[#1f4cff]/90 transition-all">
+                    <span className="text-base font-bold text-white whitespace-nowrap uppercase tracking-[0.4em] md:-rotate-90">Week {week.week}</span>
                   </div>
                   <div className="flex-1">
                     <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">

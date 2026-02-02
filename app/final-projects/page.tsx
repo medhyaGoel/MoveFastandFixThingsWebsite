@@ -22,7 +22,7 @@ const projects = [
 export default function FinalProjects() {
   return (
     <div className="bg-[#0a0a0a] text-white">
-      <section className="pt-16 pb-0 px-2 md:px-4 lg:px-6">
+      <section className="pt-24 md:pt-16 pb-0 px-2 md:px-4 lg:px-6">
         <div className="mx-auto max-w-[1700px]">
           {/* Big wordmark */}
           <motion.h1
