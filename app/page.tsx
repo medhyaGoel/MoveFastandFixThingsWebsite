@@ -58,7 +58,7 @@ export default function Home() {
                       civ·ic tech·nol·o·gy
                       </div>
                       <div className="mt-2 text-white/70 italic font-light">
-                        /tekˈnäləjē/
+                        /ˈsivik tekˈnäləjē/
                       </div>
                     </div>
                     <div className="text-white/70 text-xs uppercase tracking-[0.22em] font-medium">
