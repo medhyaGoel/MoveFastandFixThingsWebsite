@@ -4,24 +4,25 @@ import { motion } from "framer-motion";
 
 // Placeholder data for final projects - can be updated with actual projects
 const projects = [
+  { id: 1, title: "Improving the Public Comment Process", description: "Georgia Walker-Keleher and Julia Zeitlin", embedUrl: "https://docs.google.com/presentation/d/1E_FrZspVquVYQqj0CPVs5Fw2xxOAemZU0S_OxGfuLsY/preview" },
+  { id: 2, title: "Single Point of Failure Staffing", description: "Jack Norman and Reese Harrison", embedUrl: "https://docs.google.com/presentation/d/1CKcXJD0AoQyxlrqFfgS7dWEfSu8m69lbMVNeM0c4oxg/preview" },
   { 
-    id: 1, 
+    id: 3, 
     title: "Transparency Portal for Public Algorithms: Building Trust in Government", 
     description: "Thijs Simonian and Jacob Rubenstein",
     embedUrl: "https://docs.google.com/presentation/d/1oVqV9rGOuAkWehci3nF6Cgs_TSREZrSzxG81ZbYSa3A/preview"
   },
-  { id: 2, title: "Federal Website Accessibility", description: "Martin Blue", embedUrl: "https://docs.google.com/presentation/d/13HSvvXRrP-sjgEP-l1d3oNW7mYyr1L6UR2KBuHE4VJo/preview" },
-  { id: 3, title: "Improving the Public Comment Process", description: "Georgia Walker-Keleher and Julia Zeitlin", embedUrl: "https://docs.google.com/presentation/d/1E_FrZspVquVYQqj0CPVs5Fw2xxOAemZU0S_OxGfuLsY/preview" },
+  
   { id: 4, title: "GovTech Startup Challenges", description: "Sidney Suh and Alexia Papageorgiou", embedUrl: "https://docs.google.com/presentation/d/1qLe8JaeKWx4Nf2h-6cbv2ZMMtVV5k6AR1MDsr09FTmQ/preview" },
-  { id: 5, title: "Single Point of Failure Staffing", description: "Jack Norman and Reese Harrison", embedUrl: "https://docs.google.com/presentation/d/1CKcXJD0AoQyxlrqFfgS7dWEfSu8m69lbMVNeM0c4oxg/preview" },
+  { id: 5, title: "Federal Website Accessibility", description: "Martin Blue", embedUrl: "https://docs.google.com/presentation/d/13HSvvXRrP-sjgEP-l1d3oNW7mYyr1L6UR2KBuHE4VJo/preview" },
   {id: 6, title: "CalFresh Design Critique", description: "Javokhir Arifov and Elizabeth Doherty", embedUrl: "https://docs.google.com/presentation/d/1H2p0XWVsueWTLYf-mqdqPa_aiksh2qTEif-dwI8L31k/preview" },
   {id: 7, title: "Protecting America's Most Vulnerable: Stopping SNAP Fraud through Modern Payment Technology", description: "Rushank Goyal and Krit Phaisamran", embedUrl: "https://docs.google.com/presentation/d/1xgtPoSMrqx6dw5ofrq8QCEE9sjH6OePEOgoVIeKnx0A/preview" },
   {id: 8, title: "Streamlining Government Processes to Solve the Housing Crisis", description: "Devin Gupta & Krishna Madhav", embedUrl: "https://docs.google.com/presentation/d/1ZHWffH2jNSF66FRd9hKYK9bRMReTgmNDklSuTzavZx4/preview" },
 ];
 export default function FinalProjects() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
-      <section className="min-h-screen pt-16 pb-14 px-2 md:px-4 lg:px-6">
+    <div className="bg-[#0a0a0a] text-white">
+      <section className="pt-16 pb-0 px-2 md:px-4 lg:px-6">
         <div className="mx-auto max-w-[1700px]">
           {/* Big wordmark */}
           <motion.h1
@@ -36,7 +37,7 @@ export default function FinalProjects() {
           {/* Horizontal scrolling slides section */}
           <div className="mt-8 md:mt-10">
             <div className="overflow-x-auto scrollbar-hide -mx-2 md:-mx-4 lg:-mx-6 px-2 md:px-4 lg:px-6">
-              <div className="flex gap-6 md:gap-8 pb-4" style={{ width: 'max-content' }}>
+              <div className="flex gap-5 md:gap-8 pb-0" style={{ width: 'max-content' }}>
                 {projects.map((project, index) => (
                   <motion.div
                     key={index}
@@ -46,7 +47,7 @@ export default function FinalProjects() {
                     transition={{ duration: 0.6, delay: index * 0.05 }}
                     className="flex-shrink-0 w-[85vw] md:w-[500px] lg:w-[600px]"
                   >
-                    <div className="bg-[#111111] border border-white/10 overflow-hidden">
+                    <div className="bg-[#111111] overflow-hidden">
                       {/* Google Slides embed or placeholder */}
                       {project.embedUrl ? (
                         <div className="aspect-[4/3] bg-[#0a0a0a] relative">
@@ -86,7 +87,7 @@ export default function FinalProjects() {
                         </div>
                       )}
                       {/* Title and subtitle */}
-                      <div className="px-6 py-5 border-t border-white/10">
+                      <div className="px-6 py-5">
                         <h3 className="text-2xl md:text-3xl uppercase font-semibold tracking-[0.1em] text-white mb-1">
                           {project.title}
                         </h3>

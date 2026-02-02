@@ -18,7 +18,7 @@ const weeks = [
       { text: "RegLab, \"Cleaning Up Policy Sludge: An AI Statutory Research System\"", link: "" },
       { text: "Surani, F., Suzgun, M., Raman, V., Manning, C. D., Henderson, P., & Ho, D. E. (2024). AI for scaling legal reform: Mapping and redacting racial covenants in Santa Clara County. Stanford RegLab Working Paper.", link: "" }
     ],
-    slidesUrl: "",
+    slidesUrl: "https://docs.google.com/presentation/d/1mO-y5vICWnXXeigPWmIRq41N6qDEtsKue3hMNWHhuYo/edit?usp=sharing",
     recordingUrl: ""
   },
   {
@@ -37,7 +37,7 @@ const weeks = [
       { text: "\"Goodbye 1-800. Hello Propel.\"", link: "" },
       { text: "Propel, \"'...At the mercy of thieves': the growing crisis of EBT theft and its impact on families.\"", link: "" }
     ],
-    slidesUrl: "",
+    slidesUrl: "https://docs.google.com/presentation/d/1JP7CrfvAIadI2sbjiZaTD5soR-8WvxbgbLKpIPbmDBs/edit?usp=sharing",
     recordingUrl: ""
   },
   {
@@ -58,7 +58,7 @@ const weeks = [
       { text: "World Economic Forum, \"The Global Public Impact of GovTech: A $9.8 Trillion Opportunity,\" pp. 16-23.", link: "" },
       { text: "\"History of Surveillance\"", link: "" }
     ],
-    slidesUrl: "",
+    slidesUrl: "https://docs.google.com/presentation/d/1Qove2nW7NSXblvLyOkW94UTEKEeZqHp14cZ3nZ94UiY/edit?usp=sharing",
     recordingUrl: ""
   },
   {
@@ -76,7 +76,7 @@ const weeks = [
       { text: "Ann Lewis and Jennifer Pahlka. \"The product operating model: How government should deliver digital services.\"", link: "" },
       { text: "US Digital Services Playbook", link: "" }
     ],
-    slidesUrl: "",
+    slidesUrl: "https://docs.google.com/presentation/d/16yipORq7O3iPp9WW7DR8SBgmRuvx_NCN1psX9vw98FY/edit?usp=sharing",
     recordingUrl: ""
   },
   {
@@ -97,7 +97,7 @@ const weeks = [
       { text: "Brookings, \"How will we know if DOGE is Succeeding?\"", link: "" },
       { text: "White House, \"Modernizing Payments To and From America's Bank Account\"", link: "" }
     ],
-    slidesUrl: "",
+    slidesUrl: "https://docs.google.com/presentation/d/1kT7f2GSduzdkkovHiZ9KKYxQ3Mx5l3JdriFshvcx2aA/edit?usp=sharing",
     recordingUrl: ""
   },
   {
@@ -120,7 +120,7 @@ const weeks = [
       { text: "Frontdoor Benefits.", link: "" },
       { text: "Tanner Jones and Patrick McLaughlin, \"The AI bull case for the republic.\"", link: "" }
     ],
-    slidesUrl: "",
+    slidesUrl: "https://docs.google.com/presentation/d/1BqVFiKAxAC3vtgAIsJ03uKg2A1ppr2qRWWecoEpAy6g/edit?usp=sharing",
     recordingUrl: ""
   },
   {
@@ -159,7 +159,7 @@ const weeks = [
       { text: "Forbes, \"San José's Bold Plan To Lead The AI Revolution In City Government\"", link: "" },
       { text: "\"State of Connecticut Responsible AI Framework\"", link: "" }
     ],
-    slidesUrl: "",
+    slidesUrl: "https://docs.google.com/presentation/d/1PCnRdCAxnvfYs_rgGaS9j3D5OdSZR0VO8373eX4jyoI/edit?usp=sharing",
     recordingUrl: ""
   },
   {
@@ -179,7 +179,7 @@ const weeks = [
       { text: "Chris Kuang, \"Breaking into civic tech\"", link: "" },
       { text: "Cyd Harrell, A Civic Technologist's Practice Guide, Chapter 3: \"Ways to Contribute\"", link: "" }
     ],
-    slidesUrl: "",
+    slidesUrl: "https://docs.google.com/presentation/d/1OkZwyaDxM_L05vT203nYUcfkWa5ptlcq0xK7aB5_IOw/edit?usp=sharing",
     recordingUrl: ""
   },
   {
@@ -244,7 +244,7 @@ export default function Syllabus() {
           </motion.div>
 
           {/* Week-by-week detailed breakdown */}
-          <div className="mt-12 md:px-4 space-y-12">
+          <div className="mt-12 md:px-4 space-y-6">
             {weeks.map((week, index) => (
               <motion.div
                 key={index}
@@ -252,11 +252,11 @@ export default function Syllabus() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: index * 0.05 }}
-                className="p-8 md:p-10 transition-all group"
+                className="p-6 md:p-8 transition-all group"
               >
-                <div className="flex flex-col md:flex-row md:items-start gap-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-[#1f4cff] flex items-center justify-center group-hover:bg-[#1f4cff]/90 transition-all">
-                    <span className="text-sm font-semibold text-white">Week {week.week}</span>
+                <div className="flex flex-col md:flex-row md:items-stretch gap-6">
+                  <div className="flex-shrink-0 w-10 max-md:h-24 md:min-h-[140px] bg-[#1f4cff] flex items-center justify-center group-hover:bg-[#1f4cff]/90 transition-all">
+                    <span className="text-base font-bold text-white whitespace-nowrap uppercase tracking-[0.4em] -rotate-90">Week {week.week}</span>
                   </div>
                   <div className="flex-1">
                     <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
@@ -334,48 +334,35 @@ export default function Syllabus() {
 
                     {/* Slides and Recordings */}
                     <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-                      {/* Slides */}
+                      {/* Slides / Final Projects */}
                       <div>
-                        <div className="flex items-center gap-2 mb-2">
+                        <div className="flex items-center gap-2">
                           <svg className="w-4 h-4 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                           </svg>
-                          <span className="text-xs uppercase tracking-[0.1em] text-white/60 font-medium">Slides</span>
+
+                          {week.week === 10 ? (
+                            <a
+                              href="/final-projects"
+                              className="text-sm md:text-base uppercase tracking-[0.1em] text-[#1f4cff] hover:text-[#1f4cff]/80 font-bold transition-colors"
+                            >
+                              Final Projects &gt;
+                            </a>
+                          ) : week.slidesUrl ? (
+                            <a
+                              href={week.slidesUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sm md:text-base uppercase tracking-[0.1em] text-[#1f4cff] hover:text-[#1f4cff]/80 font-bold transition-colors"
+                            >
+                              Slides &gt;
+                            </a>
+                          ) : (
+                            <span className="text-sm md:text-base uppercase tracking-[0.1em] text-white/60 font-bold">
+                              Slides
+                            </span>
+                          )}
                         </div>
-                        {week.slidesUrl ? (
-                          <a
-                            href={week.slidesUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm text-[#1f4cff] hover:text-[#1f4cff]/80 underline transition-colors"
-                          >
-                            View Slides →
-                          </a>
-                        ) : (
-                          <p className="text-sm text-white/50">Add slide deck link</p>
-                        )}
-                      </div>
-                      
-                      {/* Recording */}
-                      <div>
-                        <div className="flex items-center gap-2 mb-2">
-                          <svg className="w-4 h-4 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                          </svg>
-                          <span className="text-xs uppercase tracking-[0.1em] text-white/60 font-medium">Recording</span>
-                        </div>
-                        {week.recordingUrl ? (
-                          <a
-                            href={week.recordingUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm text-[#1f4cff] hover:text-[#1f4cff]/80 underline transition-colors"
-                          >
-                            Watch Recording →
-                          </a>
-                        ) : (
-                          <p className="text-sm text-white/50">Add recording link</p>
-                        )}
                       </div>
                     </div>
                   </div>

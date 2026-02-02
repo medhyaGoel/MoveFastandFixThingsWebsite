@@ -27,42 +27,42 @@ const resources = [
     category: "Publications / Communities",
     items: [
       {
-        name: "Eating Policy",
+        name: "Eating Policy >",
         description: "",
-        link: "",
+        link: "https://www.eatingpolicy.com/",
       },
       {
-        name: "Institute for Progress",
+        name: "Institute for Progress >",
         description: "",
-        link: "",
+        link: "https://ifp.org/",
       },
       {
-        name: "Foundation for American Innovation",
+        name: "Foundation for American Innovation >",
         description: "",
-        link: "",
+        link: "https://www.thefai.org/",
       },
       {
-        name: "Chamber of Progress",
+        name: "Chamber of Progress >",
         description: "",
-        link: "",
+        link: "https://progresschamber.org/",
       },
       {
-        name: "New America",
+        name: "New America >",
         description: "",
-        link: "",
+        link: "https://www.newamerica.org/",
       },
       {
-        name: "Civic Tech Field Guide",
+        name: "Civic Tech Field Guide >",
         description: "",
-        link: "",
+        link: "https://civictech.guide/",
       },
       {
-        name: "Public Interest Technology Undergraduate Network",
+        name: "Public Interest Technology Undergraduate Network >",
         description: "",
-        link: "",
+        link: "https://pit-un.org/",
       },
       {
-        name: "USDS Origins",
+        name: "USDS Origins >",
         description: "",
         link: "https://usdigitalserviceorigins.org/",
       },
@@ -82,9 +82,9 @@ const resources = [
         link: "",
       },
       {
-        name: "Chris Kuang Master List",
+        name: "Chris Kuang Master List >",
         description: "",
-        link: "",
+        link: "https://www.chriskuang.com/civictech",
       },
       {
         name: "RegLab Research Assistantship/Fellowship",
@@ -92,19 +92,19 @@ const resources = [
         link: "",
       },
       {
-        name: "Princeton CITP Fellowship",
+        name: "Princeton CITP Fellowship >",
         description: "",
-        link: "",
+        link: "https://citp.princeton.edu/programs/fellows-program",
       },
       {
-        name: "Horizon Institute opportunities",
+        name: "Horizon Institute opportunities >",
         description: "",
-        link: "",
+        link: "https://emergingtechpolicy.org/",
       },
       {
-        name: "Presidential Innovation Fellowship",
+        name: "Presidential Innovation Fellowship >",
         description: "",
-        link: "",
+        link: "https://presidentialinnovationfellows.gov/",
       },
       {
         name: "U.S. Digital Response",
@@ -132,9 +132,9 @@ const resources = [
     category: "Stanford Specific",
     items: [
       {
-        name: "RegLab",
+        name: "RegLab >",
         description: "",
-        link: "",
+        link: "https://reglab.stanford.edu/",
       },
       {
         name: "CS + Social Good",
@@ -142,17 +142,12 @@ const resources = [
         link: "",
       },
       {
-        name: "Public Interest Tech Lab",
+        name: "Public Interest Tech Lab >",
         description: "",
-        link: "",
+        link: "https://pit.stanford.edu/",
       },
       {
         name: "Tech, Ethics, and Policy Hub",
-        description: "",
-        link: "",
-      },
-      {
-        name: "PIT Lab",
         description: "",
         link: "",
       },
@@ -161,6 +156,8 @@ const resources = [
 ];
 
 export default function Resources() {
+  // Max width per box: use '' for no limit, or e.g. 'max-w-[45%]' (of parent), 'max-w-[40vw]' (of viewport), 'max-w-[500px]'
+  const boxMaxWidth = '';
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       <section className="min-h-screen pt-16 pb-14 px-2 md:px-4 lg:px-6">
@@ -186,10 +183,14 @@ export default function Resources() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: categoryIndex * 0.1 }}
               >
-                <h2 className="text-2xl md:text-base tracking-[0.1em] uppercase font-semibold mb-10 text-white">
-                &gt;&gt;&gt; {category.category}
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-center gap-6 mb-10">
+                  <div className="h-px flex-1 max-w-[80px] bg-[#1f4cff]" aria-hidden />
+                  <h2 className="text-sm md:text-base uppercase tracking-[0.2em] font-semibold text-white shrink-0">
+                    {category.category}
+                  </h2>
+                  <div className="h-px flex-1 bg-[#1f4cff]" aria-hidden />
+                </div>
+                <div className="flex flex-wrap gap-6">
                   {category.items.map((item, itemIndex) => {
                     const Component = item.link ? motion.a : motion.div;
                     const linkProps = item.link ? {
@@ -197,7 +198,17 @@ export default function Resources() {
                       target: "_blank",
                       rel: "noopener noreferrer",
                     } : {};
-                    
+                    const isBlue = (categoryIndex + itemIndex) % 2 === 0;
+                    const boxClasses = isBlue
+                      ? 'bg-[#1f4cff] border-[#1f4cff]'
+                      : 'bg-white border-white';
+                    const textClasses = isBlue
+                      ? 'text-white'
+                      : 'text-black';
+                    const mutedClasses = isBlue
+                      ? 'text-white/90'
+                      : 'text-black/80';
+
                     return (
                       <Component
                         key={itemIndex}
@@ -206,22 +217,14 @@ export default function Resources() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: (categoryIndex * 0.1) + (itemIndex * 0.05) }}
-                        className={`bg-white/10 rounded-xl border border-white/20 p-6 md:p-8 transition-all group ${item.link ? 'hover:border-white/30 cursor-pointer' : ''}`}
+                        className={`rounded-none border p-5 md:p-6 transition-all group flex-[1_1_min(100%,400px)] min-w-0 ${boxMaxWidth} ${boxClasses} ${item.link ? 'hover:opacity-95 cursor-pointer' : ''}`}
                       >
-                        <h3 className="text-xl md:text-2xl font-semibold mb-3 text-white group-hover:text-white/90 transition-colors">
+                        <h3 className={`text-xl md:text-2xl font-semibold mb-3 ${textClasses} transition-colors`}>
                           {item.name}
                         </h3>
                         {item.description && (
-                          <p className="text-base text-white/70 leading-relaxed mb-4 font-light">
+                          <p className={`text-base leading-relaxed mb-4 font-light break-words ${mutedClasses}`}>
                             {item.description}
-                          </p>
-                        )}
-                        {item.link && (
-                          <p className="text-sm text-white/60 font-medium group-hover:text-white/80 transition-colors flex items-center gap-2">
-                            Learn more
-                            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
                           </p>
                         )}
                       </Component>
