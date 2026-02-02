@@ -34,7 +34,7 @@ export default function Home() {
                 <span className="font-medium">Move Fast and Fix Things: Innovating for Effective Government</span>, a deep dive into the past, present, and future of civic technology.
               </p>
               <p className="mt-4 text-white/75 text-lg leading-relaxed font-light text-balance">
-              Over the course of 10 weeks, we convened 28 preeminent civic technologists to examine 1. Why civic technology matters, 2. Where is it succeeding and failing, and 3. How young people can position themselves to contribute to revitalizing American civic tech. 
+              Over the course of 11 weeks, we convened 21 preeminent civic technologists to examine 1. Why civic technology matters, 2. Where is it succeeding and failing, and 3. How young people can position themselves to contribute to revitalizing American civic tech. 
                This website contains our materials and learnings from leading this course. We hope that this can serve as a launch pad for aspiring civic technologists across the nation as a non-partisan, student perspective on the case for effective civic technology and pathways to make it a reality. 
               </p>
             </motion.div>

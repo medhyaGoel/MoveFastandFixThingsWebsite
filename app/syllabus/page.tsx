@@ -70,7 +70,7 @@ const weeks = [
       "How do governments respond to crises that demand rapid technical capacity?"
     ],
     guestSpeakers: ["Ryan Panchadsaram (Kleiner Perkins Advisor, Former Deputy US CTO)"],
-    bonusEvent: "Jennifer Pahlka (Author of Recoding America, Founder of Code for America), Ben Bain (Director of State Capacity, Niskanen Center) (10:30-11:30 AM, Encina Fourth Floor)",
+    bonusEvent: "Jennifer Pahlka (Author of Recoding America, Founder of Code for America), Ben Bain (Director of State Capacity, Niskanen Center), Andrew Greenway (Public Digital), and Lauren Lombardo (Recoding America Fund) (10:30-11:30 AM, Encina Fourth Floor)",
     readings: [
       { text: "Jennifer Pahlka. Recoding America: Why Government Is Failing in the Digital Age and How We Can Do Better: Chapters 1-5.", link: "" },
       { text: "Ann Lewis and Jennifer Pahlka. \"The product operating model: How government should deliver digital services.\"", link: "" },
@@ -219,7 +219,7 @@ export default function Syllabus() {
           >
             <p className="text-base md:text-lg text-white/80 leading-relaxed font-light max-w-3xl">
               This course was initially designed for the quarter system and was taught in Fall 2025 at Stanford University as <span className="font-medium">POLISCI 33SI - Move Fast & Fix Things: Innovating for Effective Government</span>.
-              We held 12 panels with 28 total speakers over the course of 10 weeks.
+              We held 11 panels with 21 total speakers over the course of 11 weeks.
             </p>
           </motion.div>
 
