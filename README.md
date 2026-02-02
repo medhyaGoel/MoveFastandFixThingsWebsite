@@ -1,6 +1,6 @@
 # Move Fast & Fix Things
 
-A modern website for POLISCI 33SI: Innovating for Effective Government - A deep dive into the past, present, and future of civic technology.
+Website for POLISCI 33SI, Move Fast & Fix Things: Innovating for Effective Government, a course that Emily Tianshi and I co-developed and led at Stanford University in Fall 2025.
 
 ## Features
 
